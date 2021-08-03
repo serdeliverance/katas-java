@@ -7,7 +7,7 @@ import java.util.List;
 import static io.github.serdeliverance.medium.SparseArrays.matchingStrings;
 import static org.junit.jupiter.api.Assertions.*;
 
-class SparseArraysSpec {
+class SparseArraysTest {
 
     @Test
     void test() {

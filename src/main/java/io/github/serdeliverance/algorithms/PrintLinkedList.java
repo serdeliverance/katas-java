@@ -4,7 +4,7 @@ public class PrintLinkedList {
 
     static void printLinkedList(SinglyLinkedListNode head) {
         SinglyLinkedListNode currentNode = head;
-        while(currentNode != null) {
+        while (currentNode != null) {
             System.out.println(currentNode.data);
             currentNode = currentNode.next;
         }
@@ -13,16 +13,24 @@ public class PrintLinkedList {
     static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
         SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
 
-        if (head == null) {
-            return newNode;
-        }
+        if (head == null) return newNode;
 
         SinglyLinkedListNode curr = head;
 
-        while(curr.next != null) curr = curr.next;
+        while (curr.next != null) curr = curr.next;
 
         curr.next = newNode;
         return head;
+    }
+
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+        SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+
+        if (llist == null) return newNode;
+
+        newNode.next = llist;
+
+        return newNode;
     }
 
     static class SinglyLinkedListNode {
